@@ -19,6 +19,7 @@
         margin-bottom: 0px;
         color: white;
         background-color: black;
+        text-align: center;
     }
     .h1, .h2, .h3, h1, h2, h3 {
         margin-top: 0px;
@@ -27,8 +28,7 @@
 
     }
 
-    .h1, h1 {
-        margin-left: 400px;
+    h1 {
         font-size: 36px;
     }
 
