@@ -20,7 +20,7 @@
   <script src="https://www.w3schools.com/lib/w3.js"></script>
   <script src="${pageContext.request.contextPath}/resources/js/jquery.vide.js"></script>
 </head>
-<body data-vide-bg="${pageContext.request.contextPath}/resources/video/ocean">
+<body data-vide-bg="${pageContext.request.contextPath}/resources/video/blackCat">
 <!--<script>window.jQuery || document.write('<script src="../libs/jquery/dist/jquery.min.js"><\/script>')</script>-->
 
 </body>

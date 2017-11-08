@@ -13,4 +13,9 @@ public class EcotypeController {
 		
 	}
 	
+	@GetMapping("detail")
+	public void get() {
+		
+	}
+	
 }
