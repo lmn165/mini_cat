@@ -31,7 +31,7 @@
 		<property name="configLocation" value="classpath:/mybatis-config.xml" />
 	</bean>
 	
-	<mybatis-spring:scan base-package="org.java.mappers"/>
+	<mybatis-spring:scan base-package="org.cat.mappers"/>
 	
 	
 	
