@@ -20,8 +20,10 @@ public class CafemapController {
 	@GetMapping("/cafemap")
 	public void list(Model model) {
 		log.info("cafe controller");
-		int cno = 1;
+		int cno = 4;
 		model.addAttribute("cafe", service.getList(cno));
+		String cname = "cname";
+		model.addAttribute("list", service.getNameList(cname));
 		log.info(""+model.toString());
 	}
 }

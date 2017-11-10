@@ -28,6 +28,12 @@ public class CafeTest {
           
     }
 	@Test
+	public void readNameListTest() {
+		
+		log.info("" + mapper.getNameList("cname"));      // 문자열밖에 안되기 때문에 문자열로..
+		
+	}
+	@Test
 	public void readTest() {
 		
 		log.info("" + mapper.get(1));      // 문자열밖에 안되기 때문에 문자열로..
