@@ -5,8 +5,8 @@
 
 <mapper namespace="org.cat.mappers.EcoDataMapper">
 	<insert id="regData">
-		insert into tb_ecotype(ename, epath, edata)
-		values (#{ename}, #{epath}, #{edata})
+		insert into tb_ecotype(ename, summary, econtent, epath, width)
+		values (#{ename}, #{summary}, #{econtent}, #{epath}, #{width})
 	</insert>
 
 	<select id="read" resultType="Ecotype">

@@ -4,5 +4,6 @@ import lombok.Data;
 
 @Data
 public class Ecotype {
-	private String ename, epath, edata;
+	private int eno;
+	private String ename, summary, econtent, epath, width;
 }

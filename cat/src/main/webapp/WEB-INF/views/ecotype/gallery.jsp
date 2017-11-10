@@ -35,10 +35,9 @@
 
 <!-- Supersized -->
 <link href="/resources/css/supersized.css" rel="stylesheet">
-<!-- Fav Icon -->
-<!-- <link rel="shortcut icon" href="#"> -->
+<!-- UserDefine -->
+<link href="/resources/css/userdefine.css" rel="stylesheet">
 
-<!-- <link rel="apple-touch-icon"  href="#"> -->
 <!-- Modernizr -->
 <script src="/resources/js/modernizr.js"></script>
 <!-- Analytics -->
@@ -58,205 +57,12 @@
 		s.parentNode.insertBefore(ga, s);
 	})();
 </script>
-<style>
-#email, #password {
-	height: 30px;
-	padding-top: 6px;
-	padding-bottom: 6px;
-	padding-left: 12px;
-	padding-right: 12px;
-	margin-top: 0px;
-	border-bottom-width: 0px;
-}
-
-.container {
-	width: 1300px;
-	overflow: auto;
-}
-
-.grid-item {
-	width: 14%;
-	height: 180px;
-	margin: 10px;
-}
-/* 2 columns */
-.grid-item--width2 {
-	width: 24%;
-}
-img { width: 100%; height: 100%; }
-</style>
 </head>
 <body>
 	<div id="work" class="page">
 		<div class="container">
 			<div class="grid">
 
-				<!-- Item Project and Filter Name -->
-				<div class="item-thumbs span3 photography grid-item">
-					<!-- Fancybox - Gallery Enabled - Title - Full Image -->
-					<a class="hover-wrap fancybox" data-fancybox-group="gallery"
-						title="The Cat" href="/resources/img/1.jpg"> <span
-						class="overlay-img"></span> <span
-						class="overlay-img-thumb font-icon-plus"></span>
-					</a>
-					<!-- Thumb Image and Description -->
-					<img src="/resources/img/1.jpg" alt="So much cute kitty!">
-				</div>
-				<!-- End Item Project -->
-
-				<!-- Item Project and Filter Name -->
-				<div class="item-thumbs span3 photography grid-item grid-item--width2">
-					<!-- Fancybox - Gallery Enabled - Title - Full Image -->
-					<a class="hover-wrap fancybox" data-fancybox-group="gallery"
-						title="The Cat" href="/resources/img/2.jpg"> <span
-						class="overlay-img"></span> <span
-						class="overlay-img-thumb font-icon-plus"></span>
-					</a>
-					<!-- Thumb Image and Description -->
-					<img src="/resources/img/2.jpg"
-						alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
-				</div>
-				<!-- End Item Project -->
-
-				<!-- Item Project and Filter Name -->
-				<div class="item-thumbs span3 photography grid-item grid-item--width2">
-					<!-- Fancybox - Gallery Enabled - Title - Full Image -->
-					<a class="hover-wrap fancybox" data-fancybox-group="gallery"
-						title="The Cat" href="/resources/img/3.jpg"> <span
-						class="overlay-img"></span> <span
-						class="overlay-img-thumb font-icon-plus"></span>
-					</a>
-					<!-- Thumb Image and Description -->
-					<img src="/resources/img/3.jpg"
-						alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
-				</div>
-				<!-- End Item Project -->
-
-				<!-- Item Project and Filter Name -->
-				<div class="item-thumbs span3 photography grid-item grid-item--width2">
-					<!-- Fancybox - Gallery Enabled - Title - Full Image -->
-					<a class="hover-wrap fancybox" data-fancybox-group="gallery"
-						title="The Cat" href="/resources/img/4.jpg"> <span
-						class="overlay-img"></span> <span
-						class="overlay-img-thumb font-icon-plus"></span>
-					</a>
-					<!-- Thumb Image and Description -->
-					<img src="/resources/img/4.jpg"
-						alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
-				</div>
-				<!-- End Item Project -->
-
-				<!-- Item Project and Filter Name --> 
-				<div class="item-thumbs span3 photography grid-item grid-item--width2">
-					<!-- Fancybox - Gallery Enabled - Title - Full Image -->
-					<a class="hover-wrap fancybox" data-fancybox-group="gallery"
-						title="The Cat" href="/resources/img/5.jpg"> <span
-						class="overlay-img"></span> <span
-						class="overlay-img-thumb font-icon-plus"></span>
-					</a>
-					<!-- Thumb Image and Description -->
-					<img src="/resources/img/5.jpg"
-						alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
-				</div>
-				<!-- End Item Project -->
-
-				<!-- Item Project and Filter Name -->
-				<div class="item-thumbs span3 photography grid-item">
-					<!-- Fancybox - Gallery Enabled - Title - Full Image -->
-					<a class="hover-wrap fancybox" data-fancybox-group="gallery"
-						title="The Cat" href="/resources/img/6.jpg"> <span
-						class="overlay-img"></span> <span
-						class="overlay-img-thumb font-icon-plus"></span>
-					</a>
-					<!-- Thumb Image and Description -->
-					<img src="/resources/img/6.jpg"
-						alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
-				</div>
-				<!-- End Item Project -->
-
-				<!-- Item Project and Filter Name -->
-				<div class="item-thumbs span3 photography grid-item grid-item--width2">
-					<!-- Fancybox - Gallery Enabled - Title - Full Image -->
-					<a class="hover-wrap fancybox" data-fancybox-group="gallery"
-						title="The Cat" href="/resources/img/7.jpg"> <span
-						class="overlay-img"></span> <span
-						class="overlay-img-thumb font-icon-plus"></span>
-					</a>
-					<!-- Thumb Image and Description -->
-					<img src="/resources/img/7.jpg"
-						alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
-				</div>
-				<!-- End Item Project -->
-
-				<!-- Item Project and Filter Name -->
-				<div class="item-thumbs span3 photography grid-item">
-					<!-- Fancybox - Gallery Enabled - Title - Full Image -->
-					<a class="hover-wrap fancybox" data-fancybox-group="gallery"
-						title="The Cat" href="/resources/img/8.jpg"> <span
-						class="overlay-img"></span> <span
-						class="overlay-img-thumb font-icon-plus"></span>
-					</a>
-					<!-- Thumb Image and Description -->
-					<img src="/resources/img/8.jpg"
-						alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
-				</div>
-				<!-- End Item Project -->
-
-				<!-- Item Project and Filter Name -->
-				<div class="item-thumbs span3 photography grid-item">
-					<!-- Fancybox - Gallery Enabled - Title - Full Image -->
-					<a class="hover-wrap fancybox" data-fancybox-group="gallery"
-						title="The Cat" href="/resources/img/9.jpg"> <span
-						class="overlay-img"></span> <span
-						class="overlay-img-thumb font-icon-plus"></span>
-					</a>
-					<!-- Thumb Image and Description -->
-					<img src="/resources/img/9.jpg"
-						alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
-				</div>
-				<!-- End Item Project -->
-
-				<!-- Item Project and Filter Name -->
-				<div class="item-thumbs span3 photography grid-item grid-item--width2">
-					<!-- Fancybox - Gallery Enabled - Title - Full Image -->
-					<a class="hover-wrap fancybox" data-fancybox-group="gallery"
-						title="The Cat" href="/resources/img/10.jpg"> <span
-						class="overlay-img"></span> <span
-						class="overlay-img-thumb font-icon-plus"></span>
-					</a>
-					<!-- Thumb Image and Description -->
-					<img src="/resources/img/10.jpg"
-						alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
-				</div>
-				<!-- End Item Project -->
-
-				<!-- Item Project and Filter Name -->
-				<div class="item-thumbs span3 photography grid-item grid-item--width2">
-					<!-- Fancybox - Gallery Enabled - Title - Full Image -->
-					<a class="hover-wrap fancybox" data-fancybox-group="gallery"
-						title="cat1" href="/resources/img/11.jpg"> <span
-						class="overlay-img"></span> <span
-						class="overlay-img-thumb font-icon-plus"></span>
-					</a>
-					<!-- Thumb Image and Description -->
-					<img src="/resources/img/11.jpg"
-						alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
-				</div>
-				<!-- End Item Project -->
-
-				<!-- Item Project and Filter Name -->
-				<div class="item-thumbs span3 photography grid-item grid-item--width2">
-					<!-- Fancybox - Gallery Enabled - Title - Full Image -->
-					<a class="hover-wrap fancybox" data-fancybox-group="gallery"
-						title="The Cat" href="/resources/img/12.jpg"> <span
-						class="overlay-img"></span> <span
-						class="overlay-img-thumb font-icon-plus"></span>
-					</a>
-					<!-- Thumb Image and Description -->
-					<img src="/resources/img/12.jpg"
-						alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
-				</div>
-				<!-- End Item Project -->
 
 
 			</div>
@@ -292,6 +98,36 @@ img { width: 100%; height: 100%; }
 		src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 	<script src="/resources/js/masonry.pkgd.js"></script>
 	<!-- Default JS -->
+	
+	
+	<script>
+		$(document).ready(function imgLoding() {
+			var $grid = $(".grid");
+			
+			
+			
+			var imgCon ="";
+			for(var i = 0; i < 15 ; i++){
+				imgCon += '<div class="item-thumbs span3 photography grid-item grid-item--width">' + 
+				'<a class="hover-wrap fancybox" data-fancybox-group="gallery" title="The Cat" href="/resources/img/1.jpg">'+
+				'<span class="overlay-img"></span>'+
+				'<span class="overlay-img-thumb font-icon-plus"></span></a>'+
+				'<img src="/resources/img/1.jpg" alt="So much cute kitty!"></div>';
+			}
+			
+			$grid.html(imgCon);
+			
+// 			for(var i = 0; i < 20; i++){
+// 				imgCon += '<div class="item-thumbs span3 photography grid-item">' + 
+// 				'<a class="hover-wrap fancybox" data-fancybox-group="gallery" title="The Cat" href="/resources/img/1.jpg">'+
+// 				'<span class="overlay-img"></span>'+
+// 				'<span class="overlay-img-thumb font-icon-plus"></span></a>'+
+// 				'<img src="/resources/img/1.jpg" alt="So much cute kitty!"></div>';
+// 			}
+			
+		});
+	
+	</script>
 	<!-- End Js -->
 </body>
 </html>

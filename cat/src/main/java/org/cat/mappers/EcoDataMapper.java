@@ -1,7 +1,5 @@
 package org.cat.mappers;
 
-import java.util.List;
-
 import org.cat.domain.Ecotype;
 
 public interface EcoDataMapper extends CRUDMapper<Ecotype, Integer> {
