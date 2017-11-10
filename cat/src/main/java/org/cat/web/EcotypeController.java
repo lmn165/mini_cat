@@ -14,13 +14,13 @@ public class EcotypeController {
 	@Autowired
 	GalleryService service;
 	
-	@Autowired
+//	@Autowired
 //	EcoCriteria cri;
 	
 	@GetMapping("gallery")
 	public void list(Model model) {
 		
-//		model.addAttribute("list", service.getList());
+		model.addAttribute("list", service.getList());
 //		model.addAttribute("criteria", 10);
 		
 	}

@@ -9,8 +9,10 @@
 		values (#{ename}, #{summary}, #{econtent}, #{epath}, #{width})
 	</insert>
 
-	<select id="read" resultType="Ecotype">
-		select * from tb_ecotype
+	<select id="update">
+		update tb_ecotype
+		   set epath = #{epath}
+		 where eno = #{eno}
 	</select>
 	
 	<select id="getTime" resultType="string">

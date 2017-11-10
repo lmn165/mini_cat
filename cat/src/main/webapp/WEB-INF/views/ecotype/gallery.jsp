@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@include file="../include/header.jsp"%>
 <%@include file="../include/nav.jsp"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -63,8 +64,20 @@
 		<div class="container">
 			<div class="grid">
 
-
-
+				<!-- Item Project and Filter Name -->
+				<c:forEach items="${list}" var="Glry">
+					<div class="item-thumbs span3 photography grid-item grid-item--width${Glry.width}">
+						<!-- Fancybox - Gallery Enabled - Title - Full Image -->
+						<a class="hover-wrap fancybox" data-fancybox-group="gallery"
+							title="${Glry.ename}" href="/resources/img/cat-img/${Glry.epath}"> <span
+							class="overlay-img"></span> <span
+							class="overlay-img-thumb font-icon-plus"></span>
+						</a>
+						<!-- Thumb Image and Description -->
+						<img src="/resources/img/cat-img/${Glry.epath}" alt="${Glry.summary}">
+					</div>
+				</c:forEach>
+				<!-- End Item Project -->
 			</div>
 		</div>
 		<!-- End Portfolio Projects -->
@@ -98,35 +111,20 @@
 		src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 	<script src="/resources/js/masonry.pkgd.js"></script>
 	<!-- Default JS -->
-	
-	
+
+
 	<script>
-		$(document).ready(function imgLoding() {
-			var $grid = $(".grid");
+// 		$(document).ready(function imgLoding() {
+// 			var $itemImg = $(".item-thumbs img");
+// 			var $itemA = $(".item-thumbs a");
+// 			console.log($itemA);
 			
-			
-			
-			var imgCon ="";
-			for(var i = 0; i < 15 ; i++){
-				imgCon += '<div class="item-thumbs span3 photography grid-item grid-item--width">' + 
-				'<a class="hover-wrap fancybox" data-fancybox-group="gallery" title="The Cat" href="/resources/img/1.jpg">'+
-				'<span class="overlay-img"></span>'+
-				'<span class="overlay-img-thumb font-icon-plus"></span></a>'+
-				'<img src="/resources/img/1.jpg" alt="So much cute kitty!"></div>';
-			}
-			
-			$grid.html(imgCon);
-			
-// 			for(var i = 0; i < 20; i++){
-// 				imgCon += '<div class="item-thumbs span3 photography grid-item">' + 
-// 				'<a class="hover-wrap fancybox" data-fancybox-group="gallery" title="The Cat" href="/resources/img/1.jpg">'+
-// 				'<span class="overlay-img"></span>'+
-// 				'<span class="overlay-img-thumb font-icon-plus"></span></a>'+
-// 				'<img src="/resources/img/1.jpg" alt="So much cute kitty!"></div>';
+// 			for (var i=0; i < $itemA.length; i++) {
+// 				console.log($itemA.attr("href"));
+// 				var temp = $itemA[i];
+// 				console.log(temp.attr("href"));
 // 			}
-			
-		});
-	
+// 		});
 	</script>
 	<!-- End Js -->
 </body>
