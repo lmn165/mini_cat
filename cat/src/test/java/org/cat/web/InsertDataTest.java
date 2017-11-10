@@ -40,6 +40,22 @@ public class InsertDataTest {
 	}
 
 	
+	// 데이터 수정
+	@Test
+	public void modTest() {
+		Ecotype eco = new Ecotype();
+		
+		for (int i=1; i<=39; i++) {
+			eco.setEno(i);
+			eco.setEpath(i+".jpg");
+			mapper.update(eco);
+		}
+	}
+	
+	
+	
+	
+	// 데이터 입력
 	@Test
 	public void inDataTest() {
 		StringBuffer text = new StringBuffer();

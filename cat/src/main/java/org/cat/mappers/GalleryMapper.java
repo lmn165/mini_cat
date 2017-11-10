@@ -9,7 +9,7 @@ public interface GalleryMapper {
 //	@Select("select * from tbl_board order by bno desc limit #{skip}, #{size}")
 //	public List<Board> getList2(Criteria cri);
 	
-//	@Select("select * from tb_ecotype}")
+//	전체 리스트 조회
 	public List<Ecotype> getList();
 	
 }

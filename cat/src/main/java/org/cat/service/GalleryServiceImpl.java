@@ -12,7 +12,7 @@ public class GalleryServiceImpl implements GalleryService{
 
 	@Autowired
 	GalleryMapper mapper;
-
+	
 	@Override
 	public List<Ecotype> getList() {
 		
@@ -24,6 +24,5 @@ public class GalleryServiceImpl implements GalleryService{
 		// TODO Auto-generated method stub
 		return null;
 	}
-	
-	
+
 }
