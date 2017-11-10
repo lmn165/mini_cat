@@ -25,17 +25,20 @@
 
 <body>
 <div>
-  <pre style="margin-bottom: 0px;height: 41px;" id="cafeName">
-  <a href="#"><c:out value="${cafe.cname}"></c:out></a>  <a href="#">고양이 천국</a>  <a href="#">고양이 다락</a>  <a href="#">냥이 천국</a>
-  </pre>
+<!--   <pre style="margin-bottom: 0px;height: 41px;" id="cafeName"> -->
+  <tr>
+  <c:forEach items="${list}" var="cafe">
+								<td>
+								<a href="${cafe.cno}"><c:out value="${cafe.cname}"></c:out></a>&nbsp&nbsp</td>
+							</c:forEach></tr>
+<!--   </pre> -->
 </div>
 <div style="height: 100px">
   <pre style="border: 1px solid black;" id="cafeContent">
   <c:out value="${cafe.addr}"></c:out>
-  홈페이지 : <a href="#"><c:out value="${cafe.url}"></c:out></a>
+  홈페이지 : <a href="${cafe.atagurl}"><c:out value="${cafe.url}"></c:out></a>
   전화번호 : <c:out value="${cafe.ctel}"></c:out>
-  영업시간 : <c:out value="${cafe.ctime}"></c:out>
-  </pre>
+  영업시간 : <c:out value="${cafe.ctime}"></c:out></pre>
 </div>
 <!-- 지도를 표시할 div 입니다 -->
 <div id="map" style="width:100%;height:500px;"></div>
@@ -46,7 +49,7 @@
 <script>
   var mapContainer = document.getElementById('map'), // 지도를 표시할 div
     mapOption = {
-      center: new daum.maps.LatLng(37.497903, 127.027625), // 지도의 중심좌표
+      center: new daum.maps.LatLng(${cafe.lat}, ${cafe.lng}), // 지도의 중심좌표
       level: 3 // 지도의 확대 레벨
     };
 
@@ -90,6 +93,7 @@
       };
     }
 
+    
   });
 
 </script>
