@@ -11,9 +11,9 @@ public class DatabaseTest {
 	public void testConnection() throws Exception {
 		
 		String driver ="com.mysql.jdbc.Driver";
-		String url = "jdbc:mysql://localhost:3306/java97_db";
-		String user = "root";
-		String pw = "java97";
+		String url = "jdbc:mysql://all.ulovely.me:3307/mini_db";
+		String user = "test";
+		String pw = "1234";
 		
 		Class.forName(driver);
 		Connection con = DriverManager.getConnection(url, user, pw);

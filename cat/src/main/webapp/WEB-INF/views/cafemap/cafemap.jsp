@@ -2,8 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page session="false" %>
-    <%@include file="../include/header.jsp" %>
-    <%@include file="../include/nav.jsp" %>
+<%@include file="../include/nav.jsp" %>
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -27,15 +26,15 @@
 <body>
 <div>
   <pre style="margin-bottom: 0px;height: 41px;" id="cafeName">
-  <a href="#">고양이 다락방</a>  <a href="#">고양이 천국</a>  <a href="#">고양이 다락</a>  <a href="#">냥이 천국</a>
+  <a href="#"><c:out value="${cafe.cname}"></c:out></a>  <a href="#">고양이 천국</a>  <a href="#">고양이 다락</a>  <a href="#">냥이 천국</a>
   </pre>
 </div>
 <div style="height: 100px">
   <pre style="border: 1px solid black;" id="cafeContent">
-  서울특별시 서초구 서초동 1317-11
-  홈페이지 : <a href="#">godabang.com</a>
-  전화번호 : 02-3481-3123
-  영업시간 : 오후 1:00 ~ 10:00
+  <c:out value="${cafe.addr}"></c:out>
+  홈페이지 : <a href="#"><c:out value="${cafe.url}"></c:out></a>
+  전화번호 : <c:out value="${cafe.ctel}"></c:out>
+  영업시간 : <c:out value="${cafe.ctime}"></c:out>
   </pre>
 </div>
 <!-- 지도를 표시할 div 입니다 -->
@@ -56,7 +55,7 @@
     // 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
     var map = new daum.maps.Map(mapContainer, mapOption);
 
-    var markerPosition  = new daum.maps.LatLng(37.498594, 127.026260);
+    var markerPosition  = new daum.maps.LatLng(${cafe.lat}, ${cafe.lng});
 
     var marker = new daum.maps.Marker({
       map: map, // 마커를 표시할 지도
@@ -65,7 +64,7 @@
 
     marker.setMap(map);
 
-    var content = "<div><h3>고양이 다락방</h3></div>"
+    var content = "<div>${cafe.cname}</div>"
     // 마커에 표시할 인포윈도우를 생성합니다
     var infowindow = new daum.maps.InfoWindow({
       content: content // 인포윈도우에 표시할 내용
