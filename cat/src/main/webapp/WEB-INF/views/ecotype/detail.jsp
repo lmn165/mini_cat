@@ -88,31 +88,13 @@
 	margin-top: 15px;
 	display: inline-block;
 	width: 700px;
-	height: 200px;
-	border: solid 1px cornflowerblue;
+	height: 600px;
+	color: #ccc;
+/* 	border: solid 1px cornflowerblue; */
 }
 </style>
 <!-- Modernizr -->
 <script src="/resources/js/modernizr.js"></script>
-
-<!-- Analytics -->
-<script type="text/javascript">
-	var _gaq = _gaq || [];
-	_gaq.push([ '_setAccount', 'Insert Your Code' ]);
-	_gaq.push([ '_trackPageview' ]);
-
-	(function() {
-		var ga = document.createElement('script');
-		ga.type = 'text/javascript';
-		ga.async = true;
-		ga.src = ('https:' == document.location.protocol ? 'https://ssl'
-				: 'http://www')
-				+ '.google-analytics.com/ga.js';
-		var s = document.getElementsByTagName('script')[0];
-		s.parentNode.insertBefore(ga, s);
-	})();
-</script>
-<!-- End Analytics -->
 
 </head>
 </head>
@@ -121,15 +103,15 @@
 		<div class="container">
 			<!-- Title Page -->
 			<div class="title-page">
-				<h2 class="title">Cat Ecotype</h2>
+				<h2 class="title">${info.ename}</h2>
 			</div>
 			<!-- End Title Page -->
 			<div class="origin">
 				<div class="imgbox">
-					<img src="/resources/img/2.jpg">
+					<img src="/resources/img/cat-img/${info.epath}">
 				</div>
 
-				<span class="explain"></span>
+				<span class="explain">${info.econtent}</span>
 
 			</div>
 
@@ -163,6 +145,10 @@
 	<!-- Contains: jPreloader, jQuery Easing, jQuery ScrollTo, jQuery One Page Navi -->
 	<script src="/resources/js/main.js"></script>
 	<!-- Default JS -->
+	<script>
+		console.log('${info}');
+	</script>
+	
 	<!-- End Js -->
 
 </body>

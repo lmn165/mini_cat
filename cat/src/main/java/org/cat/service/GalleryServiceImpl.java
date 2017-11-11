@@ -20,9 +20,9 @@ public class GalleryServiceImpl implements GalleryService{
 	}
 
 	@Override
-	public Ecotype get(String ename) {
-		// TODO Auto-generated method stub
-		return null;
+	public Ecotype get(Integer eno) {
+
+		return mapper.read(eno);
 	}
 
 }

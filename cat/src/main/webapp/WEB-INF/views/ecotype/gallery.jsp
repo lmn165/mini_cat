@@ -43,7 +43,7 @@
 <script src="/resources/js/modernizr.js"></script>
 <!-- Analytics -->
 <script type="text/javascript">
-	var _gaq = _gaq || [];
+	/*var _gaq = _gaq || [];
 	_gaq.push([ '_setAccount', 'Insert Your Code' ]);
 	_gaq.push([ '_trackPageview' ]);
 
@@ -56,7 +56,7 @@
 				+ '.google-analytics.com/ga.js';
 		var s = document.getElementsByTagName('script')[0];
 		s.parentNode.insertBefore(ga, s);
-	})();
+	})();*/
 </script>
 </head>
 <body>
@@ -66,15 +66,18 @@
 
 				<!-- Item Project and Filter Name -->
 				<c:forEach items="${list}" var="Glry">
-					<div class="item-thumbs span3 photography grid-item grid-item--width${Glry.width}">
+					<div
+						class="item-thumbs span3 photography grid-item grid-item--width${Glry.width}">
 						<!-- Fancybox - Gallery Enabled - Title - Full Image -->
 						<a class="hover-wrap fancybox" data-fancybox-group="gallery"
-							title="${Glry.ename}" href="/resources/img/cat-img/${Glry.epath}"> <span
+							title="${Glry.ename}<a style='font-size: 14px; color: #02a5fd;' href='/ecotype/detail/${Glry.eno}'>상세보기</a>"
+							href="/resources/img/cat-img/${Glry.epath}"> <span
 							class="overlay-img"></span> <span
 							class="overlay-img-thumb font-icon-plus"></span>
 						</a>
 						<!-- Thumb Image and Description -->
-						<img src="/resources/img/cat-img/${Glry.epath}" alt="${Glry.summary}">
+						<img src="/resources/img/cat-img/${Glry.epath}"
+							alt="${Glry.summary}">
 					</div>
 				</c:forEach>
 				<!-- End Item Project -->
@@ -114,17 +117,16 @@
 
 
 	<script>
-// 		$(document).ready(function imgLoding() {
-// 			var $itemImg = $(".item-thumbs img");
-// 			var $itemA = $(".item-thumbs a");
-// 			console.log($itemA);
-			
-// 			for (var i=0; i < $itemA.length; i++) {
-// 				console.log($itemA.attr("href"));
-// 				var temp = $itemA[i];
-// 				console.log(temp.attr("href"));
-// 			}
-// 		});
+		// 		$(document).ready(function imgLoding() {
+		// 			var $itemImg = $(".item-thumbs img");
+		// 			var $itemA = $(".item-thumbs a");
+		// 			console.log($itemA);
+		// 			for (var i=0; i < $itemA.length; i++) {
+		// 				console.log($itemA.attr("href"));
+		// 				var temp = $itemA[i];
+		// 				console.log(temp.attr("href"));
+		// 			}
+		// 		});
 	</script>
 	<!-- End Js -->
 </body>

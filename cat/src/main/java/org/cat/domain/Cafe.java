@@ -6,7 +6,7 @@ import lombok.Data;
 public class Cafe {
 
 	private int cno;
-	private String cname, addr, url, ctel, ctime, atagurl;
+	private String cname, addr, url, ctel, ctime;
 	private double lat, lng;
 
 }
