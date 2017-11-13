@@ -11,9 +11,4 @@
 		#{pw}, #{nick})
 	</insert>
 
-	<select id="login" resultType="member">
-		select * from tb_member where mno = #{mno}
-	</select>
-
-
 </mapper>

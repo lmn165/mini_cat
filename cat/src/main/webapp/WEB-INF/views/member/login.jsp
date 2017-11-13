@@ -22,23 +22,25 @@
     <div class="top">
         <h1 id="title" class="hidden"><span id="logo">고양이 <span>천국</span></span></h1>
     </div>
+    
+    <form method="post">
     <div class="login-box animated fadeInUp">
         <div class="box-header">
             <h2>Log In</h2>
         </div>
-        <label for="username">Username</label>
+        <label for="id">Email</label>
         <br/>
-        <input type="text" id="username">
+        <input type="text" id="id">
         <br/>
-        <label for="password">Password</label>
+        <label for="pw">Password</label>
         <br/>
-        <input type="password" id="password">
+        <input type="password" id="pw">
         <br/>
         <button type="submit">Login</button>
         <a href="${pageContext.request.contextPath}/member/memberReg">Sign In</a>
         <br/>
-
     </div>
+    </form>
 </div>
 </body>
 

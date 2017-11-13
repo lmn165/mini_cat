@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@include file="include/nav.jsp"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -13,6 +13,10 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script
 	src="${pageContext.request.contextPath}/resources/js/jquery.vide.js"></script>
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
 <title>Insert title here</title>
 <style>
 
@@ -100,4 +104,13 @@ a:hover {
 	<!--<script>window.jQuery || document.write('<script src="../libs/jquery/dist/jquery.min.js"><\/script>')</script>-->
 
 </body>
+<script>
+	alert("등록 성공 1!!!");    		
+$(document).ready(function() {
+	alert("등록 성공2!!!");    		
+if(result === 'success'){
+	alert("등록 성공3!!!");    		
+	};
+};
+</script>
 </html>

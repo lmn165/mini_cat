@@ -9,7 +9,4 @@
 		select * from tb_ecotype
 	</select>
 
-	<select id="read" resultType="Ecotype">
-		select * from tb_ecotype where eno = #{eno}
-	</select>
 </mapper>

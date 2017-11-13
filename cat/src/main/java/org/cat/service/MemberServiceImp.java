@@ -1,5 +1,6 @@
 package org.cat.service;
 
+
 import org.cat.domain.Member;
 import org.cat.mappers.MemberMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,5 +20,6 @@ public class MemberServiceImp implements MemberService {
 		log.info("register");
 		mapper.signUp(mb);
 	}
-
+	
+	
 }

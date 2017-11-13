@@ -40,35 +40,6 @@ public class InsertDataTest {
 	}
 
 	
-	// 데이터 수정(내용)
-		@Test
-		public void modDataTest() {
-			StringBuffer text = new StringBuffer();
-			String[] sumArr = null;
-			
-			try {
-				File file = new File("D:\\refile\\content.txt");
-				Scanner sc = new Scanner(file);
-				
-				while (sc.hasNext()) {
-					text.append(sc.nextLine());
-				}
-				sumArr = text.toString().split("★");
-				sc.close();
-				
-				for(int i=1; i<=39; i++) {
-					System.out.println(sumArr[i]);
-					mapper.updateData(i, sumArr[i]);
-				}
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
-			
-			
-		}
-	
-	
-	
 	// 데이터 수정
 	@Test
 	public void modTest() {
