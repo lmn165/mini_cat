@@ -27,38 +27,28 @@
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
 <!-- Nav Style -->
 <link href="/resources/css/nav.css" rel="stylesheet">
-<style>
-a {
-	color: black;
-	text-decoration: none;
-}
+<link href="/resources/css/map.css" rel="stylesheet">
 
-a:hover {
-	color: black;
-	text-decoration: none;
-}
-</style>
 </head>
 
 <body>
 	<div>
 		<!--   <pre style="margin-bottom: 0px;height: 41px;" id="cafeName"> -->
-		<ul class="pagination mapajax">
+		<ul class="mapajax">
 			<c:forEach items="${list}" var="cafe">
-				<li class="page-item"><a class='page-link' href="${cafe.cno}"><c:out
+				<li class="map-item"><a href="${cafe.cno}"><c:out
 							value="${cafe.cname}"></c:out></a>&nbsp&nbsp</li>
 			</c:forEach>
 		</ul>
 		<!--   </pre> -->
 	</div>
-	<div style="height: 100px">
+	<!-- <div style="height: 100px">  -->
 		<pre style="border: 1px solid black;" id="cafeContent">
   <c:out value="${cafe.addr}"></c:out>
   홈페이지 : <a href="${cafe.atagurl}"><c:out value="${cafe.url}"></c:out></a>
   전화번호 : <c:out value="${cafe.ctel}"></c:out>
-  영업시간 : <c:out value="${cafe.ctime}"></c:out>
-		</pre>
-	</div>
+  영업시간 : <c:out value="${cafe.ctime}"></c:out></pre>
+	<!-- </div> -->
 	<!-- 지도를 표시할 div 입니다 -->
 	<div id="map" style="width: 100%; height: 500px;"></div>
 

@@ -30,6 +30,7 @@ html, body {
 .navbar-inverse {
 	background-color: transparent;
 	border-color: transparent;
+    margin-bottom: 0px;	
 }
 
 .navbar-inverse:hover {

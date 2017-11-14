@@ -56,7 +56,6 @@
 	<div id="work" class="page">
 		<div class="container">
 			<div class="grid">
-
 				<!-- Item Project and Filter Name -->
 				<c:forEach items="${list}" var="Glry">
 					<div
@@ -79,7 +78,6 @@
 		<!-- End Portfolio Projects -->
 	</div>
 	<!-- End Our Work Section -->
-
 <%-- 	<input type="hidden" id="list" value="${list}" > --%>
 	<!-- Js -->
 	<script

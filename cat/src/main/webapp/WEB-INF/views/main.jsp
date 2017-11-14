@@ -105,12 +105,11 @@ a:hover {
 
 </body>
 <script>
-	alert("등록 성공 1!!!");    		
+/*     		
 $(document).ready(function() {
-	alert("등록 성공2!!!");    		
 if(result === 'success'){
-	alert("등록 성공3!!!");    		
+	alert("회원가입이 완료되었..!!!!");    		
 	};
-};
+}); */
 </script>
 </html>

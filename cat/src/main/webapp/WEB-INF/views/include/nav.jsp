@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>nav</title>
+<title>Cats</title>
 </head>
 
 <nav class="navbar navbar-inverse">

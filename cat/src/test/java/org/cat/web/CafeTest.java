@@ -2,7 +2,6 @@ package org.cat.web;
 
 import javax.inject.Inject;
 
-import org.cat.mappers.CafeMapper;
 import org.cat.service.CafeService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -30,7 +29,7 @@ public class CafeTest {
 	@Test
 	public void readTest() {
 		
-		log.info("" + mapper.get(1));      // 문자열밖에 안되기 때문에 문자열로..
+		log.info("" + mapper.getList(1));      // 문자열밖에 안되기 때문에 문자열로..
 //		log.info("" + mapper.read(1));      // 문자열밖에 안되기 때문에 문자열로..
 		
 	}
