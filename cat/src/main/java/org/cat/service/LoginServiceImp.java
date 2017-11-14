@@ -25,7 +25,7 @@ public class LoginServiceImp implements LoginService {
 
 	@Override
 	public Member viewMember(Member mb) {
-		return .viewMember(mb);
+		return viewMember(mb);
 	}
 
 	@Override

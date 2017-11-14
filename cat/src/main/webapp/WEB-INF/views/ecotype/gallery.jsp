@@ -1,13 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@include file="../include/header.jsp"%>
-<%@include file="../include/nav.jsp"%>
+<%@include file="../include/nav.jsp" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>Gallery</title>
 <meta name="description" content="갤러리 화면" />
 
 <!-- Mobile Specifics -->
@@ -15,12 +14,10 @@
 <meta name="HandheldFriendly" content="true" />
 <meta name="MobileOptimized" content="320" />
 
-<!-- Mobile Internet Explorer ClearType Technology -->
-<!--[if IEMobile]>
-    <meta http-equiv="cleartype" content="on">  <![endif]-->
-
-<!-- Bootstrap -->
-<link href="/resources/css/bootstrap.min.css" rel="stylesheet">
+<!-- 합쳐지고 최소화된 최신 CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <!-- 부가적인 테마 -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
 
 <!-- Main Style -->
 <link href="/resources/css/main.css" rel="stylesheet">
@@ -39,25 +36,21 @@
 <!-- UserDefine -->
 <link href="/resources/css/userdefine.css" rel="stylesheet">
 
+<link rel="stylesheet" href="/resources/css/nav.css"> 
+
 <!-- Modernizr -->
 <script src="/resources/js/modernizr.js"></script>
 <!-- Analytics -->
-<script type="text/javascript">
-	var _gaq = _gaq || [];
-	_gaq.push([ '_setAccount', 'Insert Your Code' ]);
-	_gaq.push([ '_trackPageview' ]);
 
-	(function() {
-		var ga = document.createElement('script');
-		ga.type = 'text/javascript';
-		ga.async = true;
-		ga.src = ('https:' == document.location.protocol ? 'https://ssl'
-				: 'http://www')
-				+ '.google-analytics.com/ga.js';
-		var s = document.getElementsByTagName('script')[0];
-		s.parentNode.insertBefore(ga, s);
-	})();
-</script>
+<!-- <style> -->
+<!-- 	.navbar-inverse { -->
+<!-- 	background-color: black; -->
+<!-- 	border-color: black; -->
+<!-- 	background: black; -->
+<!-- 	height: 100px; -->
+	
+<!-- } -->
+<!-- </style> -->
 </head>
 <body>
 	<div id="work" class="page">
@@ -66,15 +59,18 @@
 
 				<!-- Item Project and Filter Name -->
 				<c:forEach items="${list}" var="Glry">
-					<div class="item-thumbs span3 photography grid-item grid-item--width${Glry.width}">
+					<div
+						class="item-thumbs span3 photography grid-item grid-item--width${Glry.width}">
 						<!-- Fancybox - Gallery Enabled - Title - Full Image -->
 						<a class="hover-wrap fancybox" data-fancybox-group="gallery"
-							title="${Glry.ename}" href="/resources/img/cat-img/${Glry.epath}"> <span
+							title="${Glry.ename}<a style='font-size: 14px; color: #02a5fd;' href='/ecotype/detail/${Glry.eno}'>상세보기</a>"
+							href="/resources/img/cat-img/${Glry.epath}"> <span
 							class="overlay-img"></span> <span
 							class="overlay-img-thumb font-icon-plus"></span>
 						</a>
 						<!-- Thumb Image and Description -->
-						<img src="/resources/img/cat-img/${Glry.epath}" alt="${Glry.summary}">
+						<img src="/resources/img/cat-img/${Glry.epath}"
+							alt="${Glry.summary}">
 					</div>
 				</c:forEach>
 				<!-- End Item Project -->
@@ -84,7 +80,7 @@
 	</div>
 	<!-- End Our Work Section -->
 
-
+<%-- 	<input type="hidden" id="list" value="${list}" > --%>
 	<!-- Js -->
 	<script
 		src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -114,17 +110,37 @@
 
 
 	<script>
-// 		$(document).ready(function imgLoding() {
-// 			var $itemImg = $(".item-thumbs img");
-// 			var $itemA = $(".item-thumbs a");
-// 			console.log($itemA);
+	/*
+		$(function (){
+			var result = new Array();
 			
-// 			for (var i=0; i < $itemA.length; i++) {
-// 				console.log($itemA.attr("href"));
-// 				var temp = $itemA[i];
-// 				console.log(temp.attr("href"));
-// 			}
-// 		});
+			<c:forEach items="${list}" var="temp">
+				var json = new Object();
+				json.ename="${temp.ename}";
+				json.epath="${temp.epath}";
+				json.summary="${temp.summary}";
+				json.econtent="${temp.econtent}";
+				result.push(json);			
+			</c:forEach>
+// 			console.log("datas=" + JSON.stringify(result));
+			
+			
+			for (var i = 0; i<5; i++){
+				console.log(result[i].ename);
+			}
+		});
+	*/
+	
+		// 		$(document).ready(function imgLoding() {
+		// 			var $itemImg = $(".item-thumbs img");
+		// 			var $itemA = $(".item-thumbs a");
+		// 			console.log($itemA);
+		// 			for (var i=0; i < $itemA.length; i++) {
+		// 				console.log($itemA.attr("href"));
+		// 				var temp = $itemA[i];
+		// 				console.log(temp.attr("href"));
+		// 			}
+		// 		});
 	</script>
 	<!-- End Js -->
 </body>

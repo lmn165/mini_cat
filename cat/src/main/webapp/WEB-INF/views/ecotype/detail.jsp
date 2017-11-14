@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@include file="../include/header.jsp"%>
 <%@include file="../include/nav.jsp"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -18,9 +17,10 @@
 	margin-top: 0px;
 	border-bottom-width: 0px;
 }
+
 #work {
-    padding-top: 0px;
-    padding-bottom: 50px;
+	padding-top: 0px;
+	padding-bottom: 50px;
 }
 </style>
 <!-- Mobile Specifics -->
@@ -28,12 +28,12 @@
 <meta name="HandheldFriendly" content="true" />
 <meta name="MobileOptimized" content="320" />
 
-<!-- Mobile Internet Explorer ClearType Technology -->
-<!--[if IEMobile]>
-    <meta http-equiv="cleartype" content="on">  <![endif]-->
-
-<!-- Bootstrap -->
-<link href="/resources/css/bootstrap.min.css" rel="stylesheet">
+<!-- 합쳐지고 최소화된 최신 CSS -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<!-- 부가적인 테마 -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
 
 <!-- Main Style -->
 <link href="/resources/css/main.css" rel="stylesheet">
@@ -55,12 +55,7 @@
 <link href="/resources/css/supersized.css" rel="stylesheet">
 <!--<link href="/resources/css/supersized.shutter.css" rel="stylesheet">-->
 
-
-<!-- Fav Icon -->
-<link rel="shortcut icon" href="#">
-
-<link rel="apple-touch-icon" href="#">
-
+<link rel="stylesheet" href="/resources/css/nav.css">
 <style>
 .title-page {
 	margin-bottom: 50px;
@@ -87,32 +82,19 @@
 .explain {
 	margin-top: 15px;
 	display: inline-block;
-	width: 700px;
-	height: 200px;
-	border: solid 1px cornflowerblue;
+	width: 750px;
+	height: 600px;
+	color: #ccc;
+	/* 	border: solid 1px cornflowerblue; */
+}
+
+.imgbox a {
+	font-size: 14px;
+	color: #02a5fd;
 }
 </style>
 <!-- Modernizr -->
 <script src="/resources/js/modernizr.js"></script>
-
-<!-- Analytics -->
-<script type="text/javascript">
-	var _gaq = _gaq || [];
-	_gaq.push([ '_setAccount', 'Insert Your Code' ]);
-	_gaq.push([ '_trackPageview' ]);
-
-	(function() {
-		var ga = document.createElement('script');
-		ga.type = 'text/javascript';
-		ga.async = true;
-		ga.src = ('https:' == document.location.protocol ? 'https://ssl'
-				: 'http://www')
-				+ '.google-analytics.com/ga.js';
-		var s = document.getElementsByTagName('script')[0];
-		s.parentNode.insertBefore(ga, s);
-	})();
-</script>
-<!-- End Analytics -->
 
 </head>
 </head>
@@ -121,19 +103,16 @@
 		<div class="container">
 			<!-- Title Page -->
 			<div class="title-page">
-				<h2 class="title">Cat Ecotype</h2>
+				<h2 class="title">${info.ename}</h2>
 			</div>
 			<!-- End Title Page -->
 			<div class="origin">
 				<div class="imgbox">
-					<img src="/resources/img/2.jpg">
+					<img src="/resources/img/cat-img/${info.epath}"> <a
+						href='/ecotype/reply/${info.eno}'>댓글</a>
 				</div>
-
-				<span class="explain"></span>
-
+				<br> <br> <span class="explain">${info.econtent}</span>
 			</div>
-
-
 
 		</div>
 		<!-- End Portfolio Projects -->
@@ -161,8 +140,9 @@
 	<!-- Fancybox for Media -->
 	<script src="/resources/js/plugins.js"></script>
 	<!-- Contains: jPreloader, jQuery Easing, jQuery ScrollTo, jQuery One Page Navi -->
-	<script src="/resources/js/main.js"></script>
+	<!-- 	<script src="/resources/js/main.js"></script> -->
 	<!-- Default JS -->
+
 	<!-- End Js -->
 
 </body>

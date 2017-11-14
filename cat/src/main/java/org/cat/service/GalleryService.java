@@ -8,6 +8,6 @@ public interface GalleryService {
 
 	public List<Ecotype> getList();
 	
-	public Ecotype get(String ename);
+	public Ecotype get(Integer eno);
 	
 }
