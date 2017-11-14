@@ -28,19 +28,8 @@ public class ReplyServiceImpl implements ReplyService {
 	@Override
 	public List<Reply> getList(Long eno) {
 
-		List<Reply> main = mapper.getList(eno);
-//		List<Reply> sub = mapper.getDate(eno);
 		
-		System.out.println("main 확인 : " +main);
-//		System.out.println("sub 확인 : " + sub);
-		
-//		
-//		for (int i = 0; i < main.size(); i++) {
-//			main.get(i).setRegDate(sub.get(i).getRegDate());
-//			System.out.println(main.get(i).getRegDate());
-//		}
-		
-		return main;
+		return mapper.getList(eno);
 	}
 
 	@Override

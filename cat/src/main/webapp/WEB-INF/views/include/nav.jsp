@@ -13,7 +13,7 @@
         <li class="active"><a href="${pageContext.request.contextPath}/">Home</a></li>
         <li><a href="${pageContext.request.contextPath}/ecotype/gallery">Cats<span class="caret"></span></a>
         </li>
-        <li><a href="${pageContext.request.contextPath}/cafemap/cafemap">Cats Cafe</a></li>
+        <li><a href="${pageContext.request.contextPath}/cafemap/cafemap?cno=1">Cats Cafe</a></li>
         </ul>
         <div class="navbar-header">
             <a class="navbar-brand">고양이 천국</a>

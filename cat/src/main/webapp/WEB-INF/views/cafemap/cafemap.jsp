@@ -1,57 +1,84 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ page session="false" %>
-<%@include file="../include/nav.jsp" %>
+	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ page session="false"%>
+<%@include file="../include/nav.jsp"%>
 <!DOCTYPE html>
 <html lang="ko">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
 
-    <title>고양이 카페</title>
+<title>고양이 카페</title>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-  <!-- 합쳐지고 최소화된 최신 CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-  <!-- 부가적인 테마 -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<!-- 합쳐지고 최소화된 최신 CSS -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<!-- 부가적인 테마 -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+<!-- Nav Style -->
+<link href="/resources/css/nav.css" rel="stylesheet">
+<style>
+a {
+	color: black;
+	text-decoration: none;
+}
+
+a:hover {
+	color: black;
+	text-decoration: none;
+}
+</style>
 </head>
 
 <body>
-<div>
-  <pre style="margin-bottom: 0px;height: 41px;" id="cafeName">
-  <a href="#"><c:out value="${cafe.cname}"></c:out></a>  <a href="#">고양이 천국</a>  <a href="#">고양이 다락</a>  <a href="#">냥이 천국</a>
-  </pre>
-</div>
-<div style="height: 100px">
-  <pre style="border: 1px solid black;" id="cafeContent">
+	<div>
+		<!--   <pre style="margin-bottom: 0px;height: 41px;" id="cafeName"> -->
+		<ul class="pagination mapajax">
+			<c:forEach items="${list}" var="cafe">
+				<li class="page-item"><a class='page-link' href="${cafe.cno}"><c:out
+							value="${cafe.cname}"></c:out></a>&nbsp&nbsp</li>
+			</c:forEach>
+		</ul>
+		<!--   </pre> -->
+	</div>
+	<div style="height: 100px">
+		<pre style="border: 1px solid black;" id="cafeContent">
   <c:out value="${cafe.addr}"></c:out>
-  홈페이지 : <a href="#"><c:out value="${cafe.url}"></c:out></a>
+  홈페이지 : <a href="${cafe.atagurl}"><c:out value="${cafe.url}"></c:out></a>
   전화번호 : <c:out value="${cafe.ctel}"></c:out>
   영업시간 : <c:out value="${cafe.ctime}"></c:out>
-  </pre>
-</div>
-<!-- 지도를 표시할 div 입니다 -->
-<div id="map" style="width:100%;height:500px;"></div>
+		</pre>
+	</div>
+	<!-- 지도를 표시할 div 입니다 -->
+	<div id="map" style="width: 100%; height: 500px;"></div>
 
-<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=7667eb8e291589fc2f4d9c7c4def041a"></script>
+	<script type="text/javascript"
+		src="//dapi.kakao.com/v2/maps/sdk.js?appkey=7667eb8e291589fc2f4d9c7c4def041a"></script>
 
-
-<script>
+	<form id='actionForm' action='/cafemap/cafemap' method='get'>
+		<input type='hidden' name='cno'>
+	</form>
+	<script>
   var mapContainer = document.getElementById('map'), // 지도를 표시할 div
     mapOption = {
-      center: new daum.maps.LatLng(37.497903, 127.027625), // 지도의 중심좌표
+      center: new daum.maps.LatLng(${cafe.lat}, ${cafe.lng}), // 지도의 중심좌표
       level: 3 // 지도의 확대 레벨
     };
 
 
   $(document).ready(function(){
+	  // 액션폼 설정
+  	var actionForm = $("#actionForm");
     // 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
     var map = new daum.maps.Map(mapContainer, mapOption);
 
@@ -90,6 +117,20 @@
       };
     }
 
+    
+    
+    
+  $(".mapajax").on("click", "li > a", function(event){
+		
+		event.preventDefault();
+		
+		var cno = $(this).attr("href");
+		
+//		alert("PAGE: " + cno);
+		
+		actionForm.find("input[name='cno']").val(cno);
+		actionForm.submit();
+	});
   });
 
 </script>

@@ -1,5 +1,7 @@
 package org.cat.service;
 
+import java.util.List;
+
 import org.cat.domain.Cafe;
 import org.cat.mappers.CafeMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,5 +26,12 @@ public class CafeServiceImpl implements CafeService {
 	public Cafe getList(Integer cno) {
 		log.info("getList");		// get 로그로 보여주셈
 		return mapper.getList(cno);
+	}
+
+	@Override
+	public List<Cafe> getNameList(String cname) {
+		log.info("getNameList");		// get 로그로 보여주셈
+		
+		return mapper.getNameList(cname);
 	}
 }

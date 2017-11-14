@@ -8,6 +8,6 @@ public interface ReplyMapper extends CRUDMapper<Reply, Long> {
 	
 	public List<Reply> getList(Long eno);
 	
-	public List<Reply> getDate(Long eno);
+//	public List<Reply> getDate(Long eno);
 	
 }

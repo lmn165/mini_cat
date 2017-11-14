@@ -14,9 +14,9 @@
 		select * from tb_reply where eno = #{eno} order by rno desc
 	</select>
 
-	<select id="getDate" resultType="Reply">
-		select date_format(regdate,'%Y-%m-%d %I:%i:%s') from tb_reply where eno = #{eno} order by rno desc
-	</select>
+<!-- 	<select id="getDate" resultType="Reply"> -->
+<!-- 		select date_format(regdate,'%Y-%m-%d %I:%i:%s') from tb_reply where eno = #{eno} order by rno desc -->
+<!-- 	</select> -->
 	
 	<delete id="delete">
 		delete from tb_reply
