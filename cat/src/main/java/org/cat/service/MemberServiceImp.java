@@ -20,6 +20,15 @@ public class MemberServiceImp implements MemberService {
 		log.info("register");
 		mapper.signUp(mb);
 	}
+
+	
+
+	@Override
+	public boolean read(String id, String pw) {
+		log.info("read");
+		
+		return mapper.login(id, pw) ==0 ? false : true;
+	}
 	
 	
 }

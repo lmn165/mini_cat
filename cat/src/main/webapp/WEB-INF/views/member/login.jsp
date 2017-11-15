@@ -23,18 +23,18 @@
         <h1 id="title" class="hidden"><span id="logo">고양이 <span>천국</span></span></h1>
     </div>
     
-    <form method="post">
+    <form action="/member/login" method="post">
     <div class="login-box animated fadeInUp">
         <div class="box-header">
             <h2>Log In</h2>
         </div>
         <label for="id">Email</label>
         <br/>
-        <input type="text" id="id">
+        <input type="text" name="id">
         <br/>
         <label for="pw">Password</label>
         <br/>
-        <input type="password" id="pw">
+        <input type="password" name="pw">
         <br/>
         <button type="submit">Login</button>
         <a href="${pageContext.request.contextPath}/member/memberReg">Sign In</a>
@@ -48,6 +48,15 @@
     $(document).ready(function () {
         $('#logo').addClass('animated fadeInDown');
         $("input:text:visible:first").focus();
+        var $result = '${result}';
+        console.log($result);
+        if($result === 'true'){
+	        console.log("true");
+        	alert("${member}" + "님 로그인되었습니다.");
+        }else{
+	        console.log("false");
+//        	alert("id 나 pw 가 맞지 않습니다.");
+        }
     });
     $('#username').focus(function() {
         $('label[for="username"]').addClass('selected');

@@ -11,4 +11,19 @@
 		#{pw}, #{nick})
 	</insert>
 
+	<select id="login" resultType="Integer">
+		select count(*) from tb_member
+		where id=#{id} and pw=#{pw}
+	</select>
+
+
+
+
+
+
+
 </mapper>
+
+
+
+

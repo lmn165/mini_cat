@@ -6,5 +6,6 @@ public interface MemberService {
 
 	public void register(Member mb);
 	
+	public boolean read(String id, String pw);
 	
 }
